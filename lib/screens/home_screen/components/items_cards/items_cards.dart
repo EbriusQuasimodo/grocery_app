@@ -13,11 +13,16 @@ class Items{
     required this.description,
   });
 }
-class ItemCards extends StatelessWidget {
+class ItemCards extends StatefulWidget {
   ItemCards({
     Key? key,
   }) : super(key: key);
 
+  @override
+  State<ItemCards> createState() => _ItemCardsState();
+}
+
+class _ItemCardsState extends State<ItemCards> {
   final _itemsCard = [
     Items(
       imageName: 'assets/images/card4.png',
@@ -39,6 +44,10 @@ class ItemCards extends StatelessWidget {
     ),
   ];
 
+  void onItemTap() {
+    Navigator.of(context).pushNamed('/details_screen');
+  }
+
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -55,7 +64,7 @@ class ItemCards extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 0),
 
               child: InkWell(
-                onTap: (){},
+                onTap: onItemTap,
 
                 child: DecoratedBox(
                   decoration: BoxDecoration(

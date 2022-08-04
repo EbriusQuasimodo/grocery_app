@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:grocery_app/screens/details_screen/details_screen.dart';
 import 'package:grocery_app/screens/home_screen/home_screen.dart';
 
 void main() {
@@ -17,8 +18,22 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         backgroundColor: Colors.white,
       ),
+
+
+        routes: {
+        "/home_screen": (BuildContext context) => HomeScreen(),
+        "/details_screen": (BuildContext context) => DetailsScreenWidget(),
+
+    },
+      initialRoute: "/home_screen",
+
       home: const HomeScreen(),
+
+
     );
+
+
+
   }
 }
 

@@ -1,5 +1,7 @@
-import 'package:flutter/cupertino.dart';
+
+
 import 'package:flutter/material.dart';
+
 import 'package:grocery_app/screens/home_screen/components/app_bar.dart';
 import 'package:grocery_app/screens/home_screen/components/category_cards.dart';
 import 'package:grocery_app/screens/home_screen/components/discount_cards.dart';
@@ -9,6 +11,7 @@ import 'package:grocery_app/screens/home_screen/components/search_box.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
+
 
   @override
   Widget build(BuildContext context) {
